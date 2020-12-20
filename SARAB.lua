@@ -990,12 +990,12 @@ end
 if text == 'تحديث السورس ▫️' and SudoBot(msg) then 
 os.execute('rm -rf SARAB.lua')
 os.execute('wget https://raw.githubusercontent.com/SARAABTEAM/SARAB/main/SARAB.lua')
-send(msg.chat_id_, msg.id_,' ▫️⁝ تم تحديث السورس \n ▫️⁝ لديك اخر اصدار لسورس بويكا\n ▫️⁝ الاصدار » { 1.3v}')
+send(msg.chat_id_, msg.id_,' ▫️⁝ تم تحديث السورس \n ▫️⁝ لديك اخر اصدار لسورس سراب\n ▫️⁝ الاصدار » { 1.3v}')
 dofile('SARAB.lua')  
 end
 if text == 'الاصدار ▫️' and SudoBot(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ▫️⁝ اصدار سورس بويكا \n ▫️⁝ الاصدار »{ 1.3v}')
+send(msg.chat_id_, msg.id_,' ▫️⁝ اصدار سورس سراب \n ▫️⁝ الاصدار »{ 1.3v}')
 end
 if text == "ضع اسم للبوت ▫️" and SudoBot(msg) then  
 database:setex(bot_id..'Set:Name:Bot'..msg.sender_user_id_,300,true) 
@@ -2237,7 +2237,7 @@ return false
 end
 os.execute('rm -rf SARAB.lua')
 os.execute('wget https://raw.githubusercontent.com/SARAABTEAM/SARAB/main/SARAB.lua')
-send(msg.chat_id_, msg.id_,' ▫️⁝ تم تحديث السورس \n ▫️⁝ لديك اخر اصدار لسورس بويكا\n ▫️⁝ الاصدار » { 1.3v}')
+send(msg.chat_id_, msg.id_,' ▫️⁝ تم تحديث السورس \n ▫️⁝ لديك اخر اصدار لسورس سراب\n ▫️⁝ الاصدار » { 1.3v}')
 dofile('SARAB.lua')  
 end
 
@@ -5211,7 +5211,7 @@ send(msg.chat_id_, msg.id_, ' ▫️⁝ تم تنزيل جميع القروده 
 end
 if text == ("تاك للقروده") and Mod(msg) then
 local list = database:smembers(bot_id..'Motee:User'..msg.chat_id_)
-t = "\n ▫️⁝ قائمة القروده الكروب \n≪━━━━━━??𝗥━━━━━━≫\n"
+t = "\n ▫️⁝ قائمة القروده الكروب \n≪━━━━━━𝗦𝗥━━━━━━≫\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -8042,8 +8042,8 @@ end
 return false
 end
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'بويكا').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'بويكا')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'سراب').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'سراب')
 local SARAB_Msg = {
 'عمغي 🥺💕.',
 'هاا شتريد كافي ☹️.',
@@ -8626,7 +8626,7 @@ end
 end
 end
 -------------------------------
-if text == ""..(database:get(bot_id..'Name:Bot') or 'بويكا').." غادر" or text == 'غادر' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'سراب').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_)  then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'▫️⁝ تم مغادرة المجموعه') 
@@ -8635,7 +8635,7 @@ end
 return false  
 end
 if text == 'بوت' then
-Namebot = (database:get(bot_id..'Name:Bot') or 'بويكا')
+Namebot = (database:get(bot_id..'Name:Bot') or 'سراب')
 send(msg.chat_id_, msg.id_,'اسمي الكيوت ['..Namebot..'] ')
 end
 if text == 'الاحصائيات' then
@@ -11086,7 +11086,7 @@ if (text and text == "تفعيل اوامر التحشيش") then
 send(msg.chat_id_, msg.id_, '  ▫️⁝ تم تفعيل اوامر التحشيش')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'بويكا')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'سراب')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
